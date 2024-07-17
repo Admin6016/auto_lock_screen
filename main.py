@@ -57,7 +57,7 @@ class IdleMonitor:
         background_label.pack(fill=tk.BOTH, expand=True)
 
         def check_password():
-            if password_entry.get() == "112233":
+            if password_entry.get() == "123321":
                 self.password_window.destroy()
                 self.password_window = None
 
