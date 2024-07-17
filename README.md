@@ -1,2 +1,36 @@
-# auto_lock_screen
-离开自动锁屏 是一个基于 Tkinter 的 Python 程序，用于监控用户的闲置时间并在超过设定的闲置时间后自动锁屏。程序会在用户闲置超过 10 秒后显示一个全屏密码输入窗口，用户需要输入正确的密码才能解锁屏幕。该程序通过监控鼠标移动和键盘输入来重置闲置时间，并使用截屏作为锁屏背景，提供了一个简单但有效的安全措施。
+# Auto Lock Screen
+
+## Usage
+
+1. **Install Dependencies**:
+   Ensure you have the required libraries installed. You can install them using pip:
+   ```bash
+   pip install pillow
+   ```
+
+2. **Run the Program**:
+   Execute the Python script to start the idle monitor:
+   ```bash
+   python main.py
+   ```
+
+3. **Idle Monitoring**:
+   - The program will start monitoring your idle time (mouse and keyboard activity).
+   - If no activity is detected for 10 seconds, a full-screen password window will appear.
+
+4. **Unlocking the Screen**:
+   - Enter the password `123321` in the password entry field to unlock the screen.
+   - The screen will remain locked until the correct password is entered.
+
+## Customization
+
+- **Idle Time**:
+  - You can change the idle time threshold by modifying the `if self.idle_time >= 10:` line in the `monitor_idle_time` method.
+
+- **Password**:
+  - Change the password by modifying the `if password_entry.get() == "112233":` line in the `check_password` function.
+
+## Notes
+
+- The main Tkinter window is hidden by default (`root.withdraw()`), and only the password window will be shown when the idle time is exceeded.
+- The program uses a screenshot of the current screen as the background for the password window to provide a seamless lock screen experience.
